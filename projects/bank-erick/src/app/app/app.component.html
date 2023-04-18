@@ -1,1 +1,57 @@
-app works
+<div [class]="'theme-wrapper ' + (theme$ | async)">
+
+  <mat-sidenav-container>
+
+    <mat-sidenav #sidenav mode="push">
+      <div class="branding"><img [src]="logo" [alt]="logo" />
+        <span>{{ 'bkek.title.short' | translate}}</span>
+      </div>
+      <mat-nav-list>
+        <a mat-list-item *ngFor="let item of navigationSideMenu" (click)="sidenav.close()" [routerLink]="[item.link]"
+          routerLinkActive="active">
+          {{item.label | translate}}
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="wrapper">
+
+      <div class="toolbar">
+        <mat-toolbar color="secondary">
+          <button mat-icon-button class="d-md-none" (click)="sidenav.open()">
+            <fa-icon icon="bars"></fa-icon>
+          </button>
+
+          <span routerLink="" class="branding spacer center d-inline d-sm-none">
+            <img [src]="logo" [alt]="logo" />
+          </span>
+          <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><img [src]="logo"
+              [alt]="logo" /> {{
+            'bkek.title.short' | translate }}</span>
+          <span routerLink="" class="branding spacer d-none d-md-inline"><img [src]="logo" [alt]="logo" /> {{
+            'bkek.title.long' | translate
+            }}</span>
+
+          <span class="d-none d-md-inline">
+            <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]"
+              routerLinkActive="active">
+              {{item.label | translate}}
+            </button>
+          </span>
+
+          <span *ngIf="language$ | async as language">
+            <mat-select [ngModel]="language" (selectionChange)="onLanguageSelect($event)">
+              <mat-option *ngFor="let l of languages" [value]="l">
+                {{ l.toUpperCase() }}
+              </mat-option>
+            </mat-select>
+          </span>
+        </mat-toolbar>
+      </div>
+
+      <div class="content">
+        <router-outlet #o="outlet"></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-container>
+</div>
