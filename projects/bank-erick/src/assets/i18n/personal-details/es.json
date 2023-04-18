@@ -1,0 +1,21 @@
+{
+  "bkek.personal-details.form.country.ch": "Suiza",
+  "bkek.personal-details.form.country.ec": "Ecuador",
+  "bkek.personal-details.form.country.es": "España",
+  "bkek.personal-details.form.country.us": "Estados Unidos",
+  "bkek.personal-details.form.error.required": "es requerido",
+  "bkek.personal-details.form.first-name": "Nombre",
+  "bkek.personal-details.form.last-name": "Apellido",
+  "bkek.personal-details.form.date-of-birth": "Fecha de nacimiento",
+  "bkek.personal-details.form.nationality": "Nacionalidad",
+  "bkek.personal-details.form.gender": "Género",
+  "bkek.personal-details.form.gender.male": "Masculino",
+  "bkek.personal-details.form.gender.female": "Femenino",
+  "bkek.personal-details.form.reset": "Reiniciar",
+  "bkek.personal-details.form.save": "Guardar",
+  "bkek.personal-details.form.send": "Enviar",
+  "bkek.personal-details.form.submit-success": "Formulario enviado",
+  "bkek.personal-details.form.title": "Detalles personales",
+  "bkek.personal-details.form.form-footer": "El banco garantiza los más altos estándares de inversión.",
+  "bkek.personal-details.form.form-footer-learn-more": "Aprenda más."
+}
