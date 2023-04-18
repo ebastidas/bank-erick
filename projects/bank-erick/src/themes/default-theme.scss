@@ -1,0 +1,7 @@
+@use '~@angular/material' as mat;
+
+$bkek-primary: mat.define-palette(mat.$indigo-palette, 800, 300, 900);
+$bkek-accent: mat.define-palette(mat.$light-blue-palette);
+$bkek-warn: mat.define-palette(mat.$pink-palette, 600);
+
+$bkek-theme: mat.define-light-theme($bkek-primary, $bkek-accent, $bkek-warn);

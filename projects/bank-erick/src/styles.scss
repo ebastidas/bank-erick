@@ -1,0 +1,39 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+
+@import 'styles-variables';
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import 'styles-reset';
+
+@include mat.core();
+
+@import './themes/default-theme';
+@import './themes/light-theme';
+@import './themes/black-theme';
+@import './themes/nature-theme';
+
+@mixin custom-components-theme($theme) {
+}
+
+.default-theme {
+  @include mat.all-component-themes($bkek-theme);
+  @include custom-components-theme($bkek-theme);
+}
+
+.light-theme {
+  @include mat.all-component-themes($bkek-light-theme);
+  @include custom-components-theme($bkek-light-theme);
+}
+
+.black-theme {
+  @include mat.all-component-themes($bkek-black-theme);
+  @include custom-components-theme($bkek-black-theme);
+}
+
+.nature-theme {
+  @include mat.all-component-themes($bkek-nature-theme);
+  @include custom-components-theme($bkek-nature-theme);
+}

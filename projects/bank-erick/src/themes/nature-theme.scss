@@ -1,0 +1,11 @@
+@use '~@angular/material' as mat;
+
+$bkek-nature-primary: mat.define-palette(mat.$brown-palette, 700, 300, 900);
+$bkek-nature-accent: mat.define-palette(mat.$deep-purple-palette, 300);
+$bkek-nature-warn: mat.define-palette(mat.$red-palette, 600);
+
+$bkek-nature-theme: mat.define-light-theme(
+  $bkek-nature-primary,
+  $bkek-nature-accent,
+  $bkek-nature-warn
+);
