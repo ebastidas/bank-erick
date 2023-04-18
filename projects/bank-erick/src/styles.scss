@@ -15,7 +15,12 @@
 @import './themes/black-theme';
 @import './themes/nature-theme';
 
+@import 'styles-reset.scss-theme';
+@import './app/app/app.component.scss-theme';
+
 @mixin custom-components-theme($theme) {
+  @include bkek-styles-reset-theme($theme);
+  @include bkek-app-component-theme($theme);
 }
 
 .default-theme {
