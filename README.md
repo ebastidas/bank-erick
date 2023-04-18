@@ -4,7 +4,7 @@ This repo showcase an example investing bank application, where the product team
 
 ## Table of Content
 
-- Live Demo at: [https://ebastidas-probable-adventure-7g6pvrv5rg2xxqj-4200.preview.app.github.dev/](https://ebastidas-probable-adventure-7g6pvrv5rg2xxqj-4200.preview.app.github.dev/)
+Live Demo at: [https://bank-erick-lirs.vercel.app/](https://bank-erick-lirs.vercel.app/)
 
 ## Getting started
 
