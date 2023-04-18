@@ -15,6 +15,13 @@ const routes: Routes = [
       )
   },
   {
+    path: 'personal-details',
+    loadChildren: () =>
+      import('./features/personal-details/personal-details.module').then(
+        (m) => m.PersonalDetailsModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'strategy'
   }

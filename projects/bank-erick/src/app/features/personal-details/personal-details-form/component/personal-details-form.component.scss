@@ -1,0 +1,42 @@
+.main-heading {
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+mat-card {
+  margin-bottom: 20px;
+}
+mat-checkbox {
+  margin: 10px 0 20px 0;
+}
+mat-slider {
+  width: 100%;
+}
+.buttons {
+  margin: 20px 0px;
+
+  button {
+    flex: 1 1 0;
+    margin: 0 10px 0 0;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+.form-footer {
+  margin: 10px 0 20px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.form-footer-learn-more {
+  text-decoration: underline;
+}
+
+.gender-error {
+  font-size: small;
+}
+
+.gender-title {
+  color: red;
+}

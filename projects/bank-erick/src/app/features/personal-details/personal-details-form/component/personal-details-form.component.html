@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="main-heading">{{ 'bkek.personal-details.form.title' | translate }}</h1>
+    </div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <mat-card>
+          <div class="row">
+            <div class="col mb-3">
+              <mat-label [ngClass]="{'gender-title': formSubmitted && form.get('gender')?.invalid}">{{
+                'bkek.personal-details.form.gender' | translate
+                }}</mat-label>
+              <br>
+              <mat-radio-group formControlName="gender">
+                <mat-radio-button [value]="Gender.male">
+                  {{ 'bkek.personal-details.form.gender.male' | translate }}
+                </mat-radio-button>
+                <mat-radio-button [value]="Gender.female" class="p-3">
+                  {{ 'bkek.personal-details.form.gender.female' | translate }}
+                </mat-radio-button>
+              </mat-radio-group>
+              <mat-error *ngIf="formSubmitted && form.get('gender')?.invalid" class="gender-error">
+                {{ 'bkek.personal-details.form.gender' | translate }}
+                {{ 'bkek.personal-details.form.error.required' | translate }}
+              </mat-error>
+            </div>
+          </div>
+          <div class="row">
+            <mat-form-field class="col">
+              <input matInput placeholder="{{ 'bkek.personal-details.form.first-name' | translate }}"
+                formControlName="firstName">
+              <mat-error *ngIf="form.get('firstName')?.invalid">
+                {{ 'bkek.personal-details.form.first-name' | translate }}
+                {{ 'bkek.personal-details.form.error.required' | translate }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col">
+              <input matInput placeholder="{{ 'bkek.personal-details.form.last-name' | translate }}"
+                formControlName="lastName">
+              <mat-error *ngIf="form.get('lastName')?.invalid">
+                {{ 'bkek.personal-details.form.last-name' | translate }}
+                {{ 'bkek.personal-details.form.error.required' | translate }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col">
+              <input matInput formControlName="dateOfBirth" [matDatepicker]="picker"
+                placeholder="{{ 'bkek.personal-details.form.date-of-birth' | translate }}">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="form.get('dateOfBirth')?.hasError('required')">
+                {{ 'bkek.personal-details.form.date-of-birth' | translate }}
+                {{ 'bkek.personal-details.form.error.required' | translate }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col">
+              <mat-label>{{ 'bkek.personal-details.form.nationality' | translate }}</mat-label>
+              <mat-select formControlName="nationality">
+                <mat-option *ngFor="let country of countries" [value]="country">
+                  <!-- {{ 'bkek.country.'  | translate }} -->
+                  {{ 'bkek.personal-details.form.country.' + country | translate }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="form.get('nationality')?.invalid">
+                {{ 'bkek.personal-details.form.nationality' | translate }}
+                {{ 'bkek.personal-details.form.error.required' | translate }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row buttons d-flex justify-content-between pad">
+            <button mat-raised-button color="primary">
+              {{ 'bkek.personal-details.form.send' | translate }}
+            </button>
+            <!-- <button type="button" mat-raised-button color="accent" (click)="save()">
+              {{ 'bkek.personal-details.form.save' | translate }}
+            </button>
+            <button type="reset" mat-raised-button (click)="reset()">
+              {{ 'bkek.personal-details.form.reset' | translate }}
+            </button> -->
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+
+      <div class="form-footer">{{ 'bkek.personal-details.form.form-footer' | translate }}
+        <span class="form-footer-learn-more">{{
+          'bkek.personal-details.form.form-footer-learn-more' | translate }}</span>
+      </div>
+    </div>
+  </div>
+</div>
