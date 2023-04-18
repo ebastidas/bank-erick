@@ -4,7 +4,7 @@ This repo showcase an example investing bank application, where the product team
 
 ## Table of Content
 
-- [Live Demo](https://ebastidas-probable-adventure-7g6pvrv5rg2xxqj-4200.preview.app.github.dev/)
+- Live Demo at: [https://ebastidas-probable-adventure-7g6pvrv5rg2xxqj-4200.preview.app.github.dev/](https://ebastidas-probable-adventure-7g6pvrv5rg2xxqj-4200.preview.app.github.dev/)
 
 ## Getting started
 
@@ -14,6 +14,28 @@ cd bank-erick
 npm install
 npm start
 ```
+
+## Demo screenshots
+
+base-page-strategy:
+
+![0-base-page-strategy](docs/demo-screenshots/0-base-page-strategy.png)
+
+personal-details-page:
+
+![1-personal-details-page](docs/demo-screenshots/1-personal-details-page.png)
+
+personal-details-page-form-submitted:
+
+![2-personal-details-page-form-submitted](docs/demo-screenshots/2-personal-details-page-form-submitted.png)
+
+personal-details-page-form-error:
+
+![3-personal-details-page-form-error](docs/demo-screenshots/3-personal-details-page-form-error.png)
+
+personal-details-page-mobile-view:
+
+![4-personal-details-page-mobile-view](docs/demo-screenshots/4-personal-details-page-mobile-view.png)
 
 ## Useful Commands
 
