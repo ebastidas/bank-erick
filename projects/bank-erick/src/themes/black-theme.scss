@@ -1,0 +1,11 @@
+@use '~@angular/material' as mat;
+
+$bkek-black-primary: mat.define-palette(mat.$grey-palette, 700, 300, 900);
+$bkek-black-accent: mat.define-palette(mat.$blue-grey-palette, 400);
+$bkek-black-warn: mat.define-palette(mat.$red-palette, 500);
+
+$bkek-black-theme: mat.define-dark-theme(
+  $bkek-black-primary,
+  $bkek-black-accent,
+  $bkek-black-warn
+);
